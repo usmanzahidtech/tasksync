@@ -6,6 +6,6 @@ body {
 }
 
 #Tasklist::-webkit-scrollbar {
-   display: none;
+   display:  none;
 }
 

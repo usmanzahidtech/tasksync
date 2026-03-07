@@ -8,7 +8,7 @@ const Loader = () => {
                 <div className='w-12 h-12 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin'></div>
 
                 {/* Text */}
-                <p className='text-emerald-500 font-medium tracking-widest text-sm uppercase animate-pulse'>
+                <p className=' text-emerald-500 font-medium tracking-widest text-sm uppercase animate-pulse'>
                     Loading...
                 </p>
             </div>
