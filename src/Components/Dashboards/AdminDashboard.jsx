@@ -12,7 +12,7 @@ const AdminDashboard = (props) => {
   };
 
   return (
-    <div className='min-h-screen w-full p-6 md:p-10 bg-[#111]'>
+    <div className='min-h-screen w-full p-5 md:p-10 bg-[#111]'>
       <Header changeUser={props.changeUser} />
       <CreateTask employees={employees} onTaskCreated={handleTaskCreated} />
       <Alltask employees={employees} />
