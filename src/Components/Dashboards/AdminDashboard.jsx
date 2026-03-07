@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Others/Header'
 import CreateTask from '../Others/CreateTask'
 import Alltask from '../Others/AllTasks'
 
-const AdminDashboard = () => {
+const AdminDashboard = (props) => {
+  // Local state so AllTasks re-renders immediately on task creation
+  const [employees, setEmployees] = useState(props.employees || []);
+
+  const handleTaskCreated = (updatedEmployees) => {
+    setEmployees(updatedEmployees);
+  };
+
   return (
-    <div className='h-screen w-full p-10'>
-      <Header/>
-      <CreateTask/>
-      <Alltask/>
+    <div className='min-h-screen w-full p-6 md:p-10 bg-[#111]'>
+      <Header changeUser={props.changeUser} />
+      <CreateTask employees={employees} onTaskCreated={handleTaskCreated} />
+      <Alltask employees={employees} />
     </div>
   )
 }
