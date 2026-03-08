@@ -46,10 +46,13 @@ function App() {
       localStorage.setItem('loggedInUser', JSON.stringify(session));
       navigate('/admin', { replace: true });
 
-    } else if (authdata?.employees) {
-      const employee = authdata.employees.find(
+    } else {
+      // Fetch fresh data from localStorage instead of relying on stale context authdata
+      const freshEmployees = JSON.parse(localStorage.getItem('employees')) || [];
+      const employee = freshEmployees.find(
         e => e.email === email && e.password === password
       );
+
       if (employee) {
         const session = { role: 'Employee', data: employee };
         setLoggedInUser(session);
@@ -58,8 +61,6 @@ function App() {
       } else {
         alert('Invalid Credentials');
       }
-    } else {
-      alert('Invalid Credentials');
     }
   };
 
