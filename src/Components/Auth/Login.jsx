@@ -15,7 +15,17 @@ const Login = ({ handleLogin }) => {
     return (
         <div className='flex h-screen w-screen justify-center items-center bg-black p-4'>
             <div className='border-2 border-emerald-600 p-8 rounded-2xl shadow-[0_0_30px_-5px_theme(colors.emerald.600)] w-full max-w-[420px] backdrop-blur-sm bg-black/50'>
-                <h2 className='text-3xl font-bold text-center text-white mb-8 uppercase tracking-wider'>
+                <div className='flex flex-col items-center mb-8'>
+                    <div className='w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/20 active:scale-95 transition-transform'>
+                        <span className='text-3xl font-black text-white'>TS</span>
+                    </div>
+                    <h1 className='text-4xl font-black text-white tracking-tighter'>
+                        TASK<span className='text-emerald-500'>SYNC</span>
+                    </h1>
+                    <p className='text-emerald-500/60 text-sm font-medium mt-1 tracking-widest uppercase'>Management Portal</p>
+                </div>
+
+                <h2 className='text-xl font-semibold text-center text-white/80 mb-8 uppercase tracking-widest'>
                     Login
                 </h2>
 

@@ -15,7 +15,7 @@ const TaskList = ({ data, onUpdate }) => {
     }
 
     return (
-        <div id='Tasklist' className='h-[55%] py-5 overflow-x-auto flex items-center justify-start flex-nowrap gap-5 w-full mt-10'>
+        <div id='Tasklist' className='h-[50%] md:h-[55%] py-5 overflow-y-auto md:overflow-x-auto flex flex-col md:flex-row items-center md:items-start justify-start gap-5 w-full mt-10'>
             {data.tasks.map((elem, idx) => {
                 const props = { key: idx, data: elem, employeeEmail: data.email, onUpdate };
                 if (elem.newTask) return <NewTask       {...props} />;

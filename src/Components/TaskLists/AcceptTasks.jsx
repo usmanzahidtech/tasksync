@@ -36,7 +36,7 @@ const AcceptTasks = ({ data, employeeEmail, onUpdate }) => {
     };
 
     return (
-        <div className='h-full shrink-0 w-[300px] p-5 bg-orange-500 rounded-xl flex flex-col justify-between shadow-md'>
+        <div className='h-full shrink-0 w-full md:w-[300px] p-5 bg-orange-500 rounded-xl flex flex-col justify-between shadow-md'>
             <div>
                 <div className='flex justify-between items-center mb-4'>
                     <span className='bg-orange-800 text-white text-xs px-3 py-1 rounded-full font-medium'>{data.category}</span>
